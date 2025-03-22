@@ -1,0 +1,29 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+#board {
+    background-image: url("./flappybirdbg.png");
+    display: block;
+    aspect-ratio: 9 / 16; /* Maintains the correct Flappy Bird aspect ratio */
+    
+    /* Full-screen on phones, max 400px width on larger screens */
+    width: min(100vw, 400px);
+    height: min(100vh, 711px); /* Ensures it doesn't overflow */
+    
+    border: none; /* Optional: Keeps visibility */
+}
+
+/* Make sure mobile browsers don't add extra padding */
+html, body {
+    touch-action: manipulation; /* Prevents unwanted zooming */
+}
